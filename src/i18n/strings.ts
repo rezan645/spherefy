@@ -1,0 +1,43 @@
+export type Lang = 'en' | 'ja' | 'es' | 'fr';
+export const ALL_LANGS: Lang[] = ['en', 'ja', 'es', 'fr'];
+
+export const I18N: Record<Lang, Record<string, string>> = {
+  en: {
+    'nav.home': 'Home',
+    'nav.features': 'Features',
+    'nav.about': 'About',
+    'auth.login': 'Login',
+    'hero.title': 'Welcome to Spherefy',
+    'hero.subtitle': 'Manage your users easily',
+    'hero.cta': 'Get Started',
+    'features.userManagement': 'User Management',
+    'features.userManagementDesc': 'Add, remove and manage users easily',
+    'features.rbac': 'RBAC',
+    'features.rbacDesc': 'Set roles and permissions for users',
+    'features.analytics': 'Analytics',
+    'features.analyticsDesc': 'Track usage and performance',
+    'about.title': 'About Spherefy',
+    'about.desc': 'Spherefy is a platform for managing users efficiently.',
+    'footer.rights': 'All rights reserved.',
+  },
+  ja: {
+    'nav.home': 'ホーム',
+    'nav.features': '機能',
+    'nav.about': '概要',
+    'auth.login': 'ログイン',
+    'hero.title': 'Spherefyへようこそ',
+    'hero.subtitle': 'ユーザーを簡単に管理できます',
+    'hero.cta': '始める',
+    'features.userManagement': 'ユーザー管理',
+    'features.userManagementDesc': 'ユーザーの追加、削除、管理が簡単です',
+    'features.rbac': 'RBAC',
+    'features.rbacDesc': 'ユーザーの役割と権限を設定',
+    'features.analytics': '分析',
+    'features.analyticsDesc': '使用状況とパフォーマンスを追跡',
+    'about.title': 'Spherefyについて',
+    'about.desc': 'Spherefyはユーザー管理を効率化するプラットフォームです。',
+    'footer.rights': '全著作権所有。',
+  },
+  es: { /* переклади */ },
+  fr: { /* переклади */ },
+};

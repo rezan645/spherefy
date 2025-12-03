@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Кольори та тема */
+:root {
+  --bg: #F9FAFB;
+  --text: #1F2937;
+  --card: #FFFFFF;
+  --accent: #3B82F6;
+}
+
+html.dark {
+  --bg: #111827;
+  --text: #F9FAFB;
+  --card: #1F1F1F;
+  --accent: #3B82F6;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.lang-toggle img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
