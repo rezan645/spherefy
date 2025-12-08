@@ -1,10 +1,8 @@
 "use client";
-
-import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { ALL_LANGS } from "../i18n/strings";
 
-export const LanguageToggle: React.FC = () => {
+export const LanguageToggle = () => {
   const { lang, setLang } = useLanguage();
 
   return (

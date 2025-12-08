@@ -1,50 +1,22 @@
-// app/page.tsx
-"use client"; // потрібно, бо будемо використовувати контекст
-
+"use client";
 import { Header } from "../src/components/Header";
 import { Hero } from "../src/components/Hero";
 import { FeatureCard } from "../src/components/FeatureCard";
 import { Footer } from "../src/components/Footer";
-import { useLanguage } from "../src/context/LanguageContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUsers, faUserShield, faChartLine } from "@fortawesome/free-solid-svg-icons";
 
-export default function Home() {
-  const { t } = useLanguage();
-
+export default function Page() {
   return (
-    <div>
+    <>
       <Header />
-      <main className="max-w-5xl mx-auto px-4">
-        <Hero />
+      <Hero />
 
-        <section id="features" className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <FeatureCard
-            icon={<FontAwesomeIcon icon={faUsers} />}
-            title={t("features.userManagement")}
-            desc={t("features.userManagementDesc")}
-          />
-          <FeatureCard
-            icon={<FontAwesomeIcon icon={faUserShield} />}
-            title={t("features.rbac")}
-            desc={t("features.rbacDesc")}
-          />
-          <FeatureCard
-            icon={<FontAwesomeIcon icon={faChartLine} />}
-            title={t("features.analytics")}
-            desc={t("features.analyticsDesc")}
-          />
-        </section>
+      <section id="features" className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <FeatureCard icon="👤" title="User Management" description="Add, remove and manage users easily" />
+        <FeatureCard icon="🔒" title="RBAC" description="Set roles and permissions for users" />
+        <FeatureCard icon="📊" title="Analytics" description="Track usage and performance" />
+      </section>
 
-        <section id="about" className="mt-12">
-          <div className="p-6 bg-white/5 rounded-xl">
-            <h2 className="text-xl font-semibold">{t("about.title")}</h2>
-            <p className="mt-3">{t("about.desc")}</p>
-          </div>
-        </section>
-
-        <Footer />
-      </main>
-    </div>
+      <Footer />
+    </>
   );
 }

@@ -1,19 +1,18 @@
 "use client";
+import { ReactNode } from "react";
 
-import React from "react";
-
-interface FeatureCardProps {
-  icon: React.ReactNode;
+interface Props {
+  icon: ReactNode;
   title: string;
-  desc: string;
+  description: string;
 }
 
-export const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, desc }) => {
+export const FeatureCard = ({ icon, title, description }: Props) => {
   return (
-    <div className="p-6 border rounded shadow flex flex-col items-center text-center">
-      <div className="text-3xl mb-4">{icon}</div>
-      <h3 className="font-semibold mb-2">{title}</h3>
-      <p>{desc}</p>
+    <div className="card flex flex-col items-center text-center p-8 gap-4 hover:translate-y-[-5px] transition-transform duration-300">
+      <div className="text-[var(--accent)] text-5xl">{icon}</div>
+      <h3 className="text-2xl font-bold">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-300 max-w-xs">{description}</p>
     </div>
   );
 };
