@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ====== THEME COLORS ====== */
+/* THEME COLORS */
 :root {
   --bg: #f8fafc;
   --text: #0f172a;
@@ -10,7 +10,6 @@
   --accent: #3b82f6;
   --accent-hover: #2563eb;
   --border: #e2e8f0;
-
   --radius: 14px;
   --shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
 }
@@ -25,38 +24,34 @@ html.dark {
   --shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
 }
 
-/* ====== BODY ====== */
 body {
   background: var(--bg);
   color: var(--text);
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.6;
 }
 
-/* ====== UNIVERSAL CARD ====== */
+/* UNIVERSAL STYLES */
 .card {
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
-  transition: all 0.3s ease;
+  transition: 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.09);
 }
 
-/* ====== HEADINGS ====== */
+/* Headings */
 h1, h2, h3, h4 {
   font-weight: 600;
-  margin: 0;
 }
 
-/* ====== LANGUAGE TOGGLE ====== */
+/* Language switch */
 .lang-toggle {
   display: inline-flex;
   align-items: center;
@@ -68,7 +63,7 @@ h1, h2, h3, h4 {
 .lang-toggle span:hover {
   color: var(--accent);
 }
-.lang-toggle span.active {
+.lang-toggle .active {
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 700;
 }
