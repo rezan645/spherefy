@@ -1,26 +1,15 @@
+// tailwind.config.ts
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}", 
+    "./components/**/*.{js,ts,jsx,tsx}"
   ],
+  darkMode: 'class', // Вмикаємо ручне перемикання тем через клас "dark":contentReference[oaicite:7]{index=7}
   theme: {
     extend: {
-      colors: {
-        accent: "var(--accent)",
-        "accent-hover": "var(--accent-hover)",
-        card: "var(--card)",
-        bg: "var(--bg)",
-        text: "var(--text)",
-        border: "var(--border)",
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-      },
-      boxShadow: {
-        DEFAULT: "var(--shadow)",
-      },
+      // тут можна додати свої кольори, шрифти тощо
     },
   },
   plugins: [],
-};
+}

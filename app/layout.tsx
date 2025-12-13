@@ -1,35 +1,22 @@
 // app/layout.tsx
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "../src/styles/globals.css"; // підключення стилів
-import { LanguageProvider } from "../src/context/LanguageContext"; // наш контекст
+import './globals.css';
+import { ReactNode } from 'react';
+import { Providers } from './providers';
+import Navbar from '../components/Navbar';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Spherefy",
-  description: "User management platform",
+export const metadata = {
+  title: 'Spherefy',
+  description: 'Spherefy – modern web projects',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <LanguageProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-white dark:bg-gray-800 transition-colors duration-300">
+        <Providers>
+          <Navbar />
           {children}
-        </LanguageProvider>
+        </Providers>
       </body>
     </html>
   );
