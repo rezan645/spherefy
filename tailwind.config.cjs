@@ -1,8 +1,9 @@
-// tailwind.config.ts
+// tailwind.config.cjs
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}", 
+    "./src/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}"
   ],
   darkMode: 'class', // Вмикаємо ручне перемикання тем через клас "dark":contentReference[oaicite:7]{index=7}
@@ -12,4 +13,4 @@ export default {
     },
   },
   plugins: [],
-}
+};

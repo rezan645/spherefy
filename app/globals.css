@@ -3,4 +3,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* У цьому файлі можна додати свої стилі, якщо потрібно */
+/* THEME COLORS */
+:root {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card: #ffffff;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --border: #e2e8f0;
+  --radius: 14px;
+  --shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+}
+
+html.dark {
+  --bg: #0f172a;
+  --text: #f8fafc;
+  --card: #1e293b;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --border: #334155;
+  --shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* UNIVERSAL STYLES */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.09);
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-weight: 600;
+}

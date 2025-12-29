@@ -27,7 +27,13 @@ export const Hero = () => {
 
       <motion.button
         whileHover={{ scale: 1.05 }}
-        className="px-10 py-4 bg-[var(--accent)] text-white text-lg rounded-xl shadow-lg hover:bg-[var(--accent-hover)] transition"
+        whileTap={{ scale: 0.95 }}
+        onClick={() => {
+          const featuresSection = document.getElementById('features');
+          featuresSection?.scrollIntoView({ behavior: 'smooth' });
+        }}
+        className="px-10 py-4 bg-[var(--accent)] text-white text-lg rounded-xl shadow-lg hover:bg-[var(--accent-hover)] transition cursor-pointer"
+        aria-label={t("hero.cta")}
       >
         {t("hero.cta")}
       </motion.button>
