@@ -3,7 +3,6 @@ import { Header } from "../../src/components/Header";
 import { Footer } from "../../src/components/Footer";
 import { useLanguage } from "../../src/context/LanguageContext";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function JobsPage() {
   const { t } = useLanguage();
@@ -99,7 +98,7 @@ export default function JobsPage() {
               >
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-xl font-bold mb-1">{job.title}</h3>
+                    <h3 className="text-xl font-semibold mb-1">{job.title}</h3>
                     <p className="text-[var(--accent)] font-semibold">{job.company}</p>
                   </div>
                   <span className="text-xs px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded">
@@ -146,4 +145,3 @@ export default function JobsPage() {
     </>
   );
 }
-

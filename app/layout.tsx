@@ -9,8 +9,8 @@ export const metadata = {
     default: 'Spherefy',
     template: '%s | Spherefy',
   },
-  description: 'Spherefy – modern web projects and user management solutions',
-  keywords: ['web development', 'user management', 'modern web', 'Spherefy'],
+  description: 'Spherefy – career platform for students to find jobs, learn skills, and get career guidance',
+  keywords: ['jobs', 'courses', 'career', 'students', 'internships', 'skills', 'Spherefy'],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

@@ -19,66 +19,6 @@ export default function CoursesPage() {
       price: "Free",
       description: "Learn HTML, CSS, JavaScript, and React from scratch. Build real-world projects and get job-ready.",
       skills: ["HTML", "CSS", "JavaScript", "React"]
-    },
-    {
-      id: 2,
-      title: "Data Science Fundamentals",
-      instructor: "Dr. Sarah Johnson",
-      duration: "8 weeks",
-      level: "Intermediate",
-      rating: 4.9,
-      students: 1800,
-      price: "$49",
-      description: "Master Python, data analysis, and machine learning basics. Perfect for students entering data science.",
-      skills: ["Python", "Pandas", "NumPy", "Matplotlib"]
-    },
-    {
-      id: 3,
-      title: "UI/UX Design Masterclass",
-      instructor: "Emily Chen",
-      duration: "10 weeks",
-      level: "Beginner",
-      rating: 4.7,
-      students: 3200,
-      price: "Free",
-      description: "Learn design principles, Figma, and create stunning user interfaces. Build your design portfolio.",
-      skills: ["Figma", "Design Principles", "Prototyping"]
-    },
-    {
-      id: 4,
-      title: "Backend Development with Node.js",
-      instructor: "Mike Rodriguez",
-      duration: "14 weeks",
-      level: "Intermediate",
-      rating: 4.8,
-      students: 2100,
-      price: "$79",
-      description: "Build robust backend systems with Node.js, Express, and databases. Learn REST APIs and authentication.",
-      skills: ["Node.js", "Express", "MongoDB", "REST APIs"]
-    },
-    {
-      id: 5,
-      title: "Mobile App Development",
-      instructor: "Alex Kim",
-      duration: "16 weeks",
-      level: "Advanced",
-      rating: 4.9,
-      students: 1500,
-      price: "$99",
-      description: "Create iOS and Android apps with React Native. Learn app deployment and app store optimization.",
-      skills: ["React Native", "iOS", "Android", "App Deployment"]
-    },
-    {
-      id: 6,
-      title: "Career Preparation & Resume Writing",
-      instructor: "Career Coaches Team",
-      duration: "4 weeks",
-      level: "All Levels",
-      rating: 4.9,
-      students: 5000,
-      price: "Free",
-      description: "Learn how to write a winning resume, ace interviews, and build your professional network. Essential for job seekers!",
-      skills: ["Resume Writing", "Interview Skills", "Networking"]
     }
   ];
 
@@ -104,7 +44,7 @@ export default function CoursesPage() {
               >
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-xl font-bold mb-1">{course.title}</h3>
+                    <h3 className="text-xl font-semibold mb-1">{course.title}</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">by {course.instructor}</p>
                   </div>
                   <span className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded">
@@ -148,4 +88,3 @@ export default function CoursesPage() {
     </>
   );
 }
-

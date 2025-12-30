@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 export const Hero = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <section className="relative bg-[var(--bg)] dark:bg-[var(--bg)] py-32 px-6 text-center">
@@ -29,7 +29,7 @@ export const Hero = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => {
-          window.location.href = '/jobs';
+          window.location.href = `/${lang === 'en' ? 'jobs' : `${lang}/jobs`}`;
         }}
         className="px-10 py-4 bg-[var(--accent)] text-white text-lg rounded-xl shadow-lg hover:bg-[var(--accent-hover)] transition cursor-pointer"
         aria-label={t("hero.cta")}

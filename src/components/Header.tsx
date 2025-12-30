@@ -29,10 +29,10 @@ export const Header = () => {
         </Link>
 
         <nav className="hidden md:flex gap-8 text-sm font-medium">
-          <Link href="/"><span className="hover:text-[var(--accent-hover)] transition">{t("nav.home")}</span></Link>
-          <Link href="/jobs"><span className="hover:text-[var(--accent-hover)] transition">{t("nav.jobs")}</span></Link>
-          <Link href="/courses"><span className="hover:text-[var(--accent-hover)] transition">{t("nav.courses")}</span></Link>
-          <Link href="/about"><span className="hover:text-[var(--accent-hover)] transition">{t("nav.about")}</span></Link>
+          <Link href={`/${lang === 'en' ? '' : lang}`}><span className="hover:text-[var(--accent-hover)] transition">{t("nav.home")}</span></Link>
+          <Link href={`/${lang === 'en' ? 'jobs' : `${lang}/jobs`}`}><span className="hover:text-[var(--accent-hover)] transition">{t("nav.jobs")}</span></Link>
+          <Link href={`/${lang === 'en' ? 'courses' : `${lang}/courses`}`}><span className="hover:text-[var(--accent-hover)] transition">{t("nav.courses")}</span></Link>
+          <Link href={`/${lang === 'en' ? 'about' : `${lang}/about`}`}><span className="hover:text-[var(--accent-hover)] transition">{t("nav.about")}</span></Link>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -95,15 +95,15 @@ export const Header = () => {
             >
               {t("nav.home")}
             </Link>
-            <Link 
-              href="/jobs" 
+            <Link
+              href={`/${lang === 'en' ? 'jobs' : `${lang}/jobs`}`}
               onClick={() => setMobileMenuOpen(false)}
               className="hover:text-[var(--accent-hover)] transition"
             >
               {t("nav.jobs")}
             </Link>
-            <Link 
-              href="/courses" 
+            <Link
+              href={`/${lang === 'en' ? 'courses' : `${lang}/courses`}`}
               onClick={() => setMobileMenuOpen(false)}
               className="hover:text-[var(--accent-hover)] transition"
             >
