@@ -1,7 +1,7 @@
 "use client";
-import { Header } from "../../src/components/Header";
-import { Footer } from "../../src/components/Footer";
-import { useLanguage } from "../../src/context/LanguageContext";
+import { Header } from "../../../src/components/Header";
+import { Footer } from "../../../src/components/Footer";
+import { useLanguage } from "../../../src/context/LanguageContext";
 import { motion } from "framer-motion";
 
 export default function CoursesPage() {
